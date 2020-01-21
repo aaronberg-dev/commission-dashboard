@@ -1,0 +1,52 @@
+$font-gotham: "Gotham Narrow A",
+"Gotham Narrow B";
+$font-verlag: "Verlag A",
+"Verlag B";
+$font-stack: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+
+$font-book: 400; // only used by Gotham
+$font-bold: 700; // used by Gotham & Verlag
+$font-black: 800; // only used by Verlag
+
+body {
+    font-family: $font-gotham, $font-verlag, $font-stack;
+    font-size: 14px;
+
+    a {
+        cursor: pointer;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: uppercase;
+    font-family: $font-verlag, $font-gotham, $font-stack;
+    font-weight: 800;
+
+    &.text-transform-none {
+        text-transform: none;
+    }
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+.is-bold {
+    font-weight: bold;
+}
+
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+    color: #03834f;
+}

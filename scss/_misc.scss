@@ -1,0 +1,138 @@
+html {
+	font-size: 62.5%;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.content {
+	padding: 2.5rem 1.5rem;
+	@include bg($white);
+	@include smTransition(all, ease-out);
+	background: $charcoal;
+	color: $white;
+	border: 3px solid transparent;
+
+	.title {
+		margin-bottom: 2.5rem;
+	}
+
+	th,
+	td {
+		color: $white;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+
+	.table-striped tbody tr:nth-of-type(odd) {
+		background-color: rgba($putty, 0.4);
+	}
+
+	.table-striped tbody tr:hover {
+		background-color: rgba($green, 0.4);
+	}
+
+	&.is-clickable {
+		&:hover {
+			transform: scale(1.1);
+			background: darken($charcoal, 15%);
+			border-color: $green;
+			@include bigShadow;
+		}
+	}
+
+}
+
+a {
+	color: $green;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $hover;
+		text-decoration: none;
+	}
+}
+
+.c-white {
+	color: $white !important;
+}
+
+.c-green {
+	color: $green !important;
+}
+
+.border-bottom {
+	border-bottom: 1px solid inherit;
+}
+
+.border-green {
+	border-color: $green !important;
+}
+
+.dropdown-menu {
+	font-size: 1.6rem;
+}
+
+.active {
+	.content {
+		border-color: $green;
+		position: relative;
+
+		button {
+			position: absolute;
+			top: 5px;
+			right: 2px;
+			color: $white;
+			font-size: 1.4rem;
+		}
+
+		&.is-clickable {
+			&:hover {
+				transform: scale(1) !important;
+				background: $charcoal !important;
+				box-shadow: none !important;
+			}
+		}
+	}
+}
+
+select.form-control {
+	height: 32px !important;
+	border-color: $coal;
+	font-size: 1.4rem;
+}
+
+.is-clickable {
+	cursor: pointer;
+}
+
+.bg-coal {
+	@include bg($coal);
+}
+
+.bg-dark-gray {
+	@include bg($dark-gray);
+}
+
+.bg-gray {
+	@include bg($gray);
+}
+
+.bg-forest {
+	@include bg($forest);
+}
+
+.bg-black {
+	@include bg($black);
+}
+
+.bg-putty {
+	@include bg($putty);
+}
+
+.bg-white {
+	@include bg($white);
+}
