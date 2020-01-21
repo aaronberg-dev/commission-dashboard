@@ -1,0 +1,11 @@
+@mixin smTransition($type, $curve: ease) {
+	transition: $type 0.3s $curve;
+}
+
+@mixin mdTransition($type, $curve: ease) {
+	transition: $type 0.7s $curve;
+}
+
+@mixin lgTransition($type, $curve: ease) {
+	transition: $type 1.5s $curve;
+}

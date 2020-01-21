@@ -1,0 +1,37 @@
+{
+  "name": "commission-dashboard",
+  "version": "1.0.0",
+  "description": "dashboard prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "scss": "node-sass --watch scss -o css",
+    "scss-store": "node-sass --watch scss/store -o ../css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronberg-dev/commission-dashboard.git"
+  },
+  "author": "aaron berg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronberg-dev/commission-dashboard/issues"
+  },
+  "homepage": "https://github.com/aaronberg-dev/commission-dashboard#readme",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "chart.js": "^2.8.0",
+    "compile-sass": "^1.0.1",
+    "counterup": "^1.0.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "popper.js": "^1.15.0",
+    "waypoints": "^4.0.1"
+  }
+}

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Business Overview</title>
+	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7686092/6716352/css/fonts.css" />
+	<link href="https://fonts.googleapis.com/css?family=Muli:600i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<link rel="stylesheet" href="node_modules/chart.js/dist/Chart.min.css">
+	<link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray">
+	<div class="container mt-1">
+		<div class="row">
+			<header class="col-12 bo-nav">
+				<div class="content">
+					<h1 class="title">Commission Breakdown</h1>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="my-overview my-5">
+								<label for="potential_earnings" class="potential-earnings-label">Potential
+									Earnings:</label> <span class="potential-earnings">
+									$7,833.00</span>
+								<label for="previous_earnings">Previous Earnings:</label>
+								<span class="prev-earnings">$9,730.00</span><br>
+								<label for="current_rank">Current Rank:</label>
+								<span class="current-rank">Diamond</span><br>
+								<label for="viewing_cycle">Viewing Cycle:</label>
+								<span class="viewing_cycle">Period <b>144</b> Cycle <b>3</b> (10-19-19 to
+									10-25-19)</span>
+								<div class="dropdown mt-3">
+									<button class="btn no-style-btn c-green border-bottom border-green"
+										type="button" id="dropdownMenuButton" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">
+										Change Cycle
+									</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">Period <b>145</b> Cycle <b>2</b>
+											(10-19-19 to
+											10-25-19)</a>
+										<a class="dropdown-item" href="#">Period <b>145</b> Cycle <b>2</b>
+											(10-19-19 to
+											10-25-19)</a>
+										<a class="dropdown-item" href="#">Period <b>145</b> Cycle <b>2</b>
+											(10-19-19 to
+											10-25-19)</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-md-6 offset-md-2">
+							<canvas id="myChart" width="100%" height="300"></canvas>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<section class="row mt-2 mb-3 bo-view my-overview-view">
+			<div class="col-12">
+				<div class="d-flex justify-content-between">
+					<div class="w-100 bo-breakdown content text-center team-commissions js-view-breakdown"
+						data-view="teamCommissions">
+						<div class="breakdown-grow">
+							Team Commission
+							<h1 class="mt-3">$1,500</h1>
+						</div>
+						<div class="view-breakdown-top text-center view-breakdown">
+							View
+						</div>
+						<div class="view-breakdown-btm text-center view-breakdown">
+							Breakdown
+						</div>
+					</div>
+					<div class="w-100 bo-breakdown mx-2 content text-center inits js-view-breakdown"
+						data-view="inits">
+						<div class="breakdown-grow">
+							Initiatives
+							<h1 class="mt-3">$23,550</h1>
+						</div>
+						<div class="view-breakdown-top text-center view-breakdown">
+							View
+						</div>
+						<div class="view-breakdown-btm text-center view-breakdown">
+							Breakdown
+						</div>
+					</div>
+					<div class="w-100 bo-breakdown content text-center fsc js-view-breakdown" data-view="fsc">
+						<div class="breakdown-grow">
+							Fast Start Commissions
+							<h1 class="mt-3">$1,250</h1>
+						</div>
+						<div class="view-breakdown-top text-center view-breakdown">
+							View
+						</div>
+						<div class="view-breakdown-btm text-center view-breakdown">
+							Breakdown
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="row mb-5 bo-view my-overview-view">
+			<div class="col-sm-6 col-md-4">
+				<div class="bg-gray text-center">
+					Emerald Pool
+					<h1 class="mt-3">$450</h1>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="bg-gray text-center">
+					Diamond Pool
+					<h1 class="mt-3">$325</h1>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="bg-gray text-center">
+					Diamond Elite Pool
+					<h1 class="mt-3">$350</h1>
+				</div>
+			</div>
+		</section>
+		<section class="row bo-view my-overview-view" id="myOverview">
+			<div class="col-12">
+				<div class="content">
+					<h2 class="text-center">
+						Potential Earnings
+					</h2>
+					<h1 class="text-center">
+						$7,833
+					</h1>
+					<h3 class="text-center period-label">Period 144 Cycle 3</h3>
+					<div class="table-responsive mt-5">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Cycles</th>
+									<th class="text-center">Pay Rank</th>
+									<th class="text-center">Active Level</th>
+									<th class="text-center" colspan="2">Rank Volume</th>
+									<th class="text-center">Sponsor Tree Volume</th>
+									<th class="text-center">TC Paid on Volume</th>
+									<th class="text-center">Builder 500s</th>
+									<th class="text-center">Active PEs</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>P144 C4</td>
+									<td class="text-center">Diamond</td>
+									<td class="text-center">150</td>
+									<td class="text-center">L 500</td>
+									<td class="text-center">R 500</td>
+									<td class="text-center">7,500</td>
+									<td class="text-center">2,500</td>
+									<td class="text-center">25</td>
+									<td class="text-center">5</td>
+								</tr>
+								<tr>
+									<td>P144 C4</td>
+									<td class="text-center">Diamond</td>
+									<td class="text-center">150</td>
+									<td class="text-center">L 500</td>
+									<td class="text-center">R 500</td>
+									<td class="text-center">7,500</td>
+									<td class="text-center">2,500</td>
+									<td class="text-center">25</td>
+									<td class="text-center">5</td>
+								</tr>
+								<tr>
+									<td>P144 C4</td>
+									<td class="text-center">Diamond</td>
+									<td class="text-center">150</td>
+									<td class="text-center">L 500</td>
+									<td class="text-center">R 500</td>
+									<td class="text-center">7,500</td>
+									<td class="text-center">2,500</td>
+									<td class="text-center">25</td>
+									<td class="text-center">5</td>
+								</tr>
+								<tr>
+									<td>P144 C4</td>
+									<td class="text-center">Diamond</td>
+									<td class="text-center">150</td>
+									<td class="text-center">L 500</td>
+									<td class="text-center">R 500</td>
+									<td class="text-center">7,500</td>
+									<td class="text-center">2,500</td>
+									<td class="text-center">25</td>
+									<td class="text-center">5</td>
+								</tr>
+								<tr class="total-row">
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td class="text-center">Total</td>
+									<td class="text-center">L 2,000</td>
+									<td class="text-center">R 2,000</td>
+									<td class="text-center">30,000</td>
+									<td class="text-center">10,000</td>
+									<td class="text-center"></td>
+									<td class="text-center"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="row bo-view" id="inits">
+			<div class="col-12">
+				<div class="content my-2">
+					<button class="float-left btn btn-default back-btn">Back</button>
+					<h2 class="text-center">
+						Initiatives
+					</h2>
+					<h1 class="text-center">
+						$23,550
+					</h1>
+					<h3 class="text-center period-label">Period 144 Cycle 3</h3>
+					<div class="row mb-5">
+						<div class="col-md-6" style="max-height: 400px;">
+							<canvas id="initPolarChart" width="100%" height="400"></canvas>
+						</div>
+						<div class="col-md-6" style="max-height: 400px;">
+							<canvas id="initBarChart" width="100%" height="400"></canvas>
+						</div>
+					</div>
+					<div class="row my-5">
+						<div class="col-12">
+							<div class="d-flex justify-content-between init-nav mt-5">
+								<button class="btn btn-primary mr-2">Lifestyle</button>
+								<button class="btn btn-default">Retail Sales</button>
+								<button class="btn btn-default">Premier 20 | Elite 40</button>
+								<button class="btn btn-default">Other</button>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Cycle Earned</th>
+											<th>Pay Rank</th>
+											<th class="text-center">Sponsor Tree Volume</th>
+											<th>Amount</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>P144 C3</td>
+											<td>Silver</td>
+											<td class="text-center">450</td>
+											<td>$15.00</td>
+										</tr>
+										<tr>
+											<td>P144 C3</td>
+											<td>Silver</td>
+											<td class="text-center">450</td>
+											<td>$15.00</td>
+										</tr>
+										<tr>
+											<td>P144 C3</td>
+											<td>Silver</td>
+											<td class="text-center">450</td>
+											<td>$15.00</td>
+										</tr>
+										<tr>
+											<td>P144 C3</td>
+											<td>Silver</td>
+											<td class="text-center">450</td>
+											<td>$15.00</td>
+										</tr>
+										<tr>
+											<td>P144 C3</td>
+											<td>Silver</td>
+											<td class="text-center">450</td>
+											<td>$15.00</td>
+										</tr>
+										<tr class="total-row">
+											<td>&nbsp;</td>
+											<td>Total</td>
+											<td class="text-center">2,250</td>
+											<td>$75.00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section class="row bo-view" id="teamCommissions">
+			<div class="col-12">
+				<div class="content my-2">
+					<button class="float-left btn btn-default back-btn">Back</button>
+					<h2 class="text-center">
+						Team Commissions
+					</h2>
+					<h1 class="text-center">
+						$1,500
+					</h1>
+					<h3 class="text-center period-label">Period 144 Cycle 3</h3>
+					<div style="max-height: 300px;">
+						<canvas id="teamCommChart" width="100%" height="400"></canvas>
+					</div>
+					<div class="row mt-5">
+						<div class="col-12">
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th class="text-center" colspan="2">Rank GV</th>
+											<th class="text-center" colspan="2">Team GV</th>
+											<th class="text-center" colspan="2">Banked GV</th>
+											<th class="text-center" colspan="2">Team + Banked GV</th>
+											<th class="text-center">Sponsor Tree Volume</th>
+											<th class="text-center">Paid as Title</th>
+											<th class="text-center">Pay GV</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">0</td>
+											<td class="text-center">0</td>
+											<td class="text-center">0</td>
+										</tr>
+										<tr>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">0</td>
+											<td class="text-center">0</td>
+											<td class="text-center">0</td>
+										</tr>
+										<tr class="total-row">
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">L 0</td>
+											<td class="text-center">R 0</td>
+											<td class="text-center">0</td>
+											<td class="text-center">0</td>
+											<td class="text-center">0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="row bo-view" id="fsc">
+			<div class="col-12">
+				<div class="content my-2">
+					<button class="float-left btn btn-default back-btn">Back</button>
+					<h2 class="text-center">
+						Fast Start Commissions
+					</h2>
+					<h1 class="text-center">
+						$1,250
+					</h1>
+					<h3 class="text-center period-label">Period 144 Cycle 3</h3>
+					<div style="max-height: 300px;">
+						<canvas id="fscCommChart" width="100%" height="400"></canvas>
+					</div>
+					<div class="row mt-5">
+						<div class="col-12">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="text-center">Amount</th>
+											<th class="text-center">Invoice</th>
+											<th>Additional Information</th>
+											<th>Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="total-row">
+											<td class="text-center">$500.00</td>
+											<td class="text-center">493922</td>
+											<td>NA</td>
+											<td>10-24-2019</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

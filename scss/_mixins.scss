@@ -1,0 +1,40 @@
+@mixin buttonStyle($bg) {
+	background-color: $bg;
+	color: $white;
+	border: 1px solid darken($bg, 5%);
+
+	&:disabled {
+		background-color: lighten($bg, 5%) !important;
+		border: 1px solid darken($bg, 5%);
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: lighten($bg, 5%) !important;
+			border: 1px solid darken($bg, 5%);
+			cursor: not-allowed;
+		}
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($bg, 5%) !important;
+		border-color: darken($bg, 10%) !important;
+		color: $white;
+	}
+}
+
+@mixin bg($bg) {
+	background-color: $bg;
+}
+
+@mixin smallShadow {
+	-webkit-box-shadow: 0px 2px 3px 1px #b9b9b9;
+	box-shadow: 0px 2px 3px 1px #b9b9b9;
+}
+
+@mixin bigShadow {
+	-webkit-box-shadow: 0px 2px 5px 3px #b9b9b9;
+	box-shadow: 0px 2px 5px 3px #b9b9b9;
+}
