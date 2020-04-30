@@ -29,7 +29,7 @@
     "compile-sass": "^1.0.1",
     "counterup": "^1.0.2",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.12.0",
     "popper.js": "^1.15.0",
     "waypoints": "^4.0.1"
