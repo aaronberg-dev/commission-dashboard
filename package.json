@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "animate.css": "^3.7.2",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "compile-sass": "^1.0.1",
     "counterup": "^1.0.2",
     "font-awesome": "^4.7.0",
